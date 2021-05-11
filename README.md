@@ -11,20 +11,20 @@ For each cell a test is performed that marks the walls that surround it and stor
 
 ## Project structure
 The project is based on two main classes called Maze and mazeEnv
-### Maze class 
+#### Maze class 
 The class translates an image into a 10X10 matrix 
 and paints each cell accordingly: if there is a wall - the cell will be painted black, otherwise - white.
 In addition, under this class the walls are marked for each cell.
 
-### mazeEnv
+#### mazeEnv
 The class defines the maze environment. It creates a structure that will hold for each possible situation the next possible action, the probability of making a step, the state the agent can reach, and the reward that the agent will receive for performing the action.
 
-### Additional classes the project consists:
+#### Additional classes the project consists:
 Cell- represents a cell in the grid.  Holds a dictionary-type structure while the key is the direction of the wall (North, East, West, South), and the values are True or False for each key.
  
 Agent- represents an agent object which tries to find his way out of the maze
 
-### Optimal Policy
+#### Optimal Policy
 In order to implement the MDP algorithm and to find out the most optimal path, I created a method that finds the optimal policy called value iteration.
 As a result, for each state the best probability action will be chosen.
 The method relies on Bellman equation:
